@@ -9,8 +9,9 @@ import android.widget.Toast;
 public class StaticBroadcastReceiver extends BroadcastReceiver {
 
     @Override
-    public void onReceive(Context context, Intent intent) { // This method is triggered when the Broadcast receiver is triggered
-        String action = intent.getAction();
+    // This method is triggered when ever the event occurs
+    public void onReceive(Context context, Intent intent) {
+        String action = intent.getAction(); // Message from the event
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(action)){
             Toast.makeText(context, "Boot Completed", Toast.LENGTH_SHORT).show();

@@ -1,7 +1,11 @@
 package com.example.eldho.broadcastreciversample;
 /**
  * This sample code is to create a dynamic broadcast Intent for charger connected and disconnected
- * Life of dynamic broadcast is same as the context of the activity
+ *
+ * NOTE : If we want to make this broadcast alive even for entire activity life cycle, register it in onCreate() instead of onResume ()
+ *          If wanted on for the whole app life cycle register it on application class onCreate ()
+ *
+ * NOTE : we can directly call the broadcast receiver in activity and get data without using a interface
  */
 
 import android.content.Intent;
@@ -23,6 +27,7 @@ public class DynamicBroadcastActivity extends AppCompatActivity implements Broad
     String message;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_broadcast_dynamic);

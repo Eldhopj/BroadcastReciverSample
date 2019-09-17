@@ -22,7 +22,7 @@
         <activity android:name=".StaticBroadcastActivity"></activity>
 
         <!--Static Broadcast Receivers-->
-        <receiver android:name=".BroadcastReceivers.StaticBroadcastReceiver">
+        <receiver android:name=".BroadcastReceivers.StaticBroadcastReceiver">// receiver name
             <intent-filter>
                 <!--When any of these two events happens our StaticBroadcastReceiver will be triggered-->
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>

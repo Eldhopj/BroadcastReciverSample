@@ -14,8 +14,9 @@ public class ChargingBroadCastReceiver extends BroadcastReceiver {
     }
 
     @Override
-    public void onReceive(Context context, Intent intent) { // This method is triggered when the Broadcast receiver is triggered
-        String action = intent.getAction();
+    // This method is triggered when ever the event occurs
+    public void onReceive(Context context, Intent intent) {
+        String action = intent.getAction(); // Message from the event
         if (listener != null) {
             if (action != null) {
                 if (Intent.ACTION_POWER_CONNECTED.equals(action)) {
